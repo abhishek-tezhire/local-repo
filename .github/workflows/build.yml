@@ -1,6 +1,6 @@
 name: Build React App
 
-# Run this workflow whenever code is pushed to the main branch
+# whenever code is pushed to the main branch this workflow will run 
 on:
   push:
     branches:
@@ -16,11 +16,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js (adjust the version as needed)
+      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '23'
 
       # Step 3: Install dependencies
       - name: Install dependencies
