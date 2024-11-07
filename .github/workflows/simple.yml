@@ -17,6 +17,3 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: '3.13' 
-
-      - name: Run Hello World 
-        run: python hello_world.py  # To run hello_world.py script
