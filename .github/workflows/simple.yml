@@ -1,7 +1,22 @@
-name: hello-world
+name: Hello World
 
-on : push
+on:
+  push:
+    branches:
+      - main  # Runs on pushes to the main branch
 
-jobs :
-  hello :
-    run : echo "Hello, World!" 
+jobs:
+  run-hello-world:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '4.10' 
+
+      - name: Run Hello World 
+        run: python hello_world.py  # To run hello_world.py script
