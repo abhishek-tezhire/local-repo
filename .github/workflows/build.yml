@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - abhishek-tezhire-patch-1
 
 jobs:
   build:
@@ -13,11 +14,11 @@ jobs:
     steps:
       # Step 1: Check out the code
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Set up Node.js (adjust the version as needed)
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -31,7 +32,7 @@ jobs:
 
       # Optional: Upload the build files as an artifact (useful if you want to review or deploy them later)
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-files
           path: build/
